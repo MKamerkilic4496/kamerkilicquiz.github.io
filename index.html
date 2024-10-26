@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <!--normal css link -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  
+    <!--We will use v4.6 version of Bootstrap..-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+     <section id="header">
+         <div class="bg-white text-center py-4">
+            <div class="container">
+                <h2 class="text-danger display-4 my-4">Physics Quiz</h2>
+            </div>
+         </div>
+     </section>
+     <div class="result d-none py-4 bg-white text-center">
+       <div class="container lead">
+         <p><span class="text-danger display-4 p-3">0%</span>Rate of True Answer.</p>
+         <p  id="successMessage" class="d-none text-danger">Congrast !! You can pass next exercise.</p>
+       </div>
+     </div>
+
+     <section id="questions">
+         <div class="bg-secondary py-3">
+            <div class="container">
+                <form class="question-form text-white">
+                    <!-- Questions -->
+                   <div class="my-4">
+                    <p>1-Who discovered the law of gravity?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1"  value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Thomas Edison
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1"  value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Nicole Tesla
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1"value="Y">
+                        <label class="form-check-label" >
+                           Isaac Newton
+                        </label>
+                      </div>
+               
+                   </div>
+                   <div class="my-4">
+                    <p>2-Who owns the theory of relativity?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           George Washington
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2"value="Y" >
+                        <label class="form-check-label" >
+                           Albert Einstein
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Steven Gerrards
+                        </label>
+                      </div>
+                  
+                   </div>
+                   <div class="my-4">
+                    <p>3-Who discovered the first law of thermodynamics?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3"value="Y" >
+                        <label class="form-check-label" >
+                           Sadi Carnot
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Lev Tolstoy
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Isaac Newton
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>4-Who discovered the second law of thermodynamics?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4"value="Y" >
+                        <label class="form-check-label" >
+                            Rudolf Clausius
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Nicolaus Copernicus
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Dostoyevski
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>5-Who invented the telephone?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5"value="N" >
+                        <label class="form-check-label" >
+                           Galileo Galilei
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="Y">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Alexander Graham Bell
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Wayne Rooney
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>6-Who invented the television?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6"value="Y">
+                        <label class="form-check-label" >
+                           John Logie Baird
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Giovanni Dos Santos
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Gareth Bale
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>7-Who inspired George Boole to discover Boolean algebra ?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7"value="N" >
+                        <label class="form-check-label" >
+                           Platon
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="Y">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Aristoteles
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Socrates
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>8-Who invented the television?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q8"value="Y" >
+                        <label class="form-check-label" >
+                           Charles Babbage
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q8" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Elon Musk
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q8" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Albert Camus
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>9-To whom does the uncertainty principle belong?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q9"value="N">
+                        <label class="form-check-label" >
+                           Newton
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q9" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Einstein
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q9" value="Y">
+                        <label class="form-check-label" for="exampleRadios2">
+                           Heisenberg
+                        </label>
+                      </div>
+                   </div>
+                   <div class="my-4">
+                    <p>10-Who discovered the law of conservation of energy?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q10"value="N" >
+                        <label class="form-check-label" >
+                           Stephan Hawking
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q10" value="Y">
+                        <label class="form-check-label" for="exampleRadios2">
+                           James Prescott Joule                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q10" value="N">
+                        <label class="form-check-label" for="exampleRadios2">
+                           David Beckham
+                        </label>
+                      </div>
+                   </div>
+                   <div class="text-center">
+                      <button type="submit" class="btn btn-light">Submit</button>
+                   </div>
+                </form>
+            </div>
+         </div>
+     </section>
+     <section class="answers d-none py-4 bg-dark text-center text-white fs-1" style="display:flex;flex-direction:column;justify-content: center;align-items: center;">
+      <h1 class="text-center text-danger">Answers</h1>
+      <ul class="list text-center list-style-none py-2" style="list-style-type: none; text-align: center;"></ul>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
